@@ -9,6 +9,16 @@
   </head>
 
   <body>
+
+  <% flash.each do |name,msg| %>
+
+  	<!-- adds the alert class based on what type of alert it is -->
+  	<% content_tag(:div, msg, class: "alert alert-#{name}") %>
+
+  <%end%>
+
+
+
     <%= yield %>
   </body>
 </html>
